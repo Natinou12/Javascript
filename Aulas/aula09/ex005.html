@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>DOM</title>
+  <style>
+    body {
+        background-color: rgb(100, 123, 131);
+        
+        color: white;
+
+        font-family: Arial, Helvetica, sans-serif;
+
+        font-size: 1.5em;
+    }
+  </style>
+</head>
+<body>
+    <h1>Estudos sobre o DOM</h1>
+    <p>Resultado:</p>
+    <p>Esse é um texto longo que vai ser duplicado usando JavaScript.</p>
+    <div>Clique em mim</div>
+    <script>
+        p1 = document.getElementsByTagName('p')[1]
+        p1.style.color = 'yellow'
+        document.write(`Isso é o que está dentro do segundo parágrafo: ${p1.innerText}`)
+    </script>
+</body>
+</html>
