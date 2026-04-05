@@ -1,0 +1,67 @@
+@charset "UTF-8";
+
+:root {
+    --fundo: rgb(70, 142, 236);
+    --fontpad: normal 15pt Arial, Helvetica, sans-serif;
+    --fundosec: white;
+    --sombra: 5px 5px 10px rgba(0, 0, 0, 0.363);
+}
+
+body {
+    background-color: var(--fundo);
+
+    font: var(--fontpad);
+
+    height: 93vh;
+}
+
+header {
+    color: white;
+
+    text-align: center;
+}
+
+main {
+    display: flex;
+
+    height: auto;
+
+    align-content: center;
+    justify-content: center;
+
+    flex-flow: row nowrap;
+}
+
+section {
+    background-color: var(--fundosec);
+
+    border-radius: 10px;
+
+    padding: 15px;
+
+    flex-basis: 500px;
+
+    box-shadow: var(--sombra);
+}
+
+/* Dei uma turbinada nesse código com flex, rs. */
+
+div#msg {
+    text-align: center;
+
+    padding-bottom: 10px;
+}
+
+#imagem {
+    display: block;
+
+    margin: auto;
+}
+
+footer {
+    color: white;
+
+    text-align: center;
+    
+    font-style: italic;
+}

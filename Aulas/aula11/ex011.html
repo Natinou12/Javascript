@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Países</title>
+  <style>
+    body {
+        font-family: Arial, Helvetica, sans-serif;
+    }
+  </style>
+</head>
+<body>
+    <h1>Digite seu país</h1>
+
+    <div id="content">
+        <label for="txtp">
+            Digite seu país: <input type="text" name="txtp" id="txtp">
+        </label>
+        <label for="btn">
+            <input type="button" value="Enviar" id="btn"> <br>
+        </label>
+    </div>
+    <div id="res">
+
+    </div>
+
+    <script>
+        var pais = document.querySelector('#txtp')
+        var btn = document.querySelector('#btn')
+        var res = document.querySelector('#res')
+        
+        btn.addEventListener('click', resp)
+
+        function resp() {
+            if (pais.value == 'Brasil') {
+                res.innerHTML = 'Brasileiro!'
+            } else {
+                res.innerHTML = 'Estrangeiro!'
+            }
+        }
+    </script>
+</body>
+</html>
