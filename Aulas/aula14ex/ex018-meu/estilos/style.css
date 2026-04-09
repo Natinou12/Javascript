@@ -12,7 +12,7 @@ body {
 
     font: var(--fontpad);
 
-    height: 94vh;
+    height: 93vh;
 }
 
 header {
@@ -44,9 +44,27 @@ section {
     box-shadow: var(--sombra);
 }
 
+p {
+    text-align: center;
+}
+
 ul {
     list-style: none;
+
+    columns: 2;
+
+    background-color: lightgray;
+
+    border-radius: 5px;
+
+    padding: 10px;
+
+    text-align: center;
+
+    box-shadow: 0px 0px 7px 1px #00000080;
 }
+
+/* Dei uma turbinada denovo */
 
 footer {
     color: white;
