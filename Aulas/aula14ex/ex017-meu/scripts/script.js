@@ -30,16 +30,20 @@ function passos() {
         cam.innerHTML = 'Impossível contar!'
     }
 
-    if (vfim <= vini) {
-        window.alert('[ERRO] Insira um valor válido!')
-        cam.innerHTML = 'Insira os números...'
-    } else {
+    if (vini < vfim) {
+
         for (res = vini; res <= vfim; res+= vpas) {
         console.log(res) // Apenas para debuggar.
         cam.innerHTML += ` ${res} 👉 ` // Eu tenho raiva de você.
         }
-        cam.innerHTML += `🏁`
+    } else {
+
+        for (res = vini; res >= vfim; res -= vpas) {
+        console.log(res) // Debug
+        cam.innerHTML += ` ${res} 👉 ` 
+        }
     }
+    cam.innerHTML += '🏁'
 }
 
-// Uhh eu queria falar que esse código deu certo então é ele que vai permanecer.
+// Tinha esquecido de implementar a contagem decrescente, mas é esse código que deu certo!
