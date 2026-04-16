@@ -44,6 +44,10 @@ section {
     box-shadow: var(--sombra);
 }
 
+#flista {
+    width: 150px;
+}
+
 footer {
     color: white;
 

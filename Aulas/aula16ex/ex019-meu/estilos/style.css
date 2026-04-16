@@ -44,6 +44,14 @@ section {
     box-shadow: var(--sombra);
 }
 
+#btn {
+    cursor: pointer;
+}
+
+#btn2 {
+    cursor: pointer;
+}
+
 footer {
     color: white;
 

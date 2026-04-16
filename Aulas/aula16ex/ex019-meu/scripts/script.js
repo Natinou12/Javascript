@@ -1,5 +1,9 @@
 var btn = document.querySelector('#btn')
 var btn2 = document.querySelector('#btn2')
+var array = document.querySelector('#array') // Falso
+
+array.style.display = 'none'
+btn2.style.display = 'none'
 
 var rarray = [] // Real
 
@@ -8,30 +12,47 @@ btn2.addEventListener('click', analisar)
 
 function adicionar() {
 
+    // Estilo
+
+    array.style.display = 'block'
+    btn2.style.display = 'block'
+
     // Variáveis
+
     var txtnum = document.querySelector('#txtnum')
     var num = Number(txtnum.value)
     var p = document.querySelector('#p')
-    var array = document.querySelector('#array') // Falso
+    
     var varray = document.createElement('option') // Valor
 
     // Condições
 
-    if (num <= 0) {
+    if (rarray.includes(num)) {
+        window.alert('Valor já encontrado na lista!')
+    } else if (num <= 0) {
         window.alert('Insira um valor acima de 0!')
     } else if (num > 100) {
         window.alert('Insira um valor menor do que 101!')
     } else {
         // Array
+
         rarray.push(num)
         rarray.sort((a, b) => a - b) // Tava dando erro, coloquei a fórmula do VS Code e funcionou kkkk
 
         array.appendChild(varray)
 
+
         varray.innerHTML = `Valor ${num} foi adicionado.`
+
+
     }
+    
+    // Pós resolução
 
     
+    p.innerHTML = ''
+    num.value = ''
+    num.focus()
 }
 
 function analisar() {
