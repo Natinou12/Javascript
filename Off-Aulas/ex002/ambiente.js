@@ -1,3 +1,5 @@
+// Array de objetos
+
 const usuarios = [
         {nome: 'Jason', idade: 79},
         {nome: 'Maria', idade: 63}
