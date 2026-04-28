@@ -3,10 +3,17 @@ let amigo = {
     sexo: 'M', 
     peso: 85.4, 
     engordar(p=0) {
-        console.log('Engordou')
-
-        this.peso += p
+       this.peso += p
+       
+       return this.peso
     }}
 
-amigo.engordar(2)
-console.log(`${amigo.nome} pesa ${amigo.peso}Kg`)
+let pesoNovo = amigo.engordar(10)
+
+console.log(`${amigo.nome} pesa ${pesoNovo}Kg`)
+
+if (pesoNovo > 0) {
+  console.log("Engordou!")
+}
+
+// Só alterei por nada mesmo
