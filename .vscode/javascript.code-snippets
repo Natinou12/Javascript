@@ -1,0 +1,9 @@
+{
+  "Log com crases": {
+    "prefix": "cl",  // O atalho para ativar o snippet
+    "body": [
+      "console.log(`$1`)"  // O cursor ficará dentro das crases
+    ],
+    "description": "Log de mensagem com crases"
+  }
+}
