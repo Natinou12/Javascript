@@ -1,2 +1,2 @@
 # Javascript
-Meus estudos do curso de Javascript 
+Meus estudos do curso de Javascript do CursoemVideo.
