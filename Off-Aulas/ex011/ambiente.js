@@ -1,45 +1,38 @@
+// Meu primeiro Leetcode
 
-// const nums = [2, 7, 11, 15]
 
-// const target = 9
 
- const nums = [3, 2, 4]
+//  const nums = [2, 7, 11, 15]
 
- const target = 6
+//  const target = 9
+
+//  const nums = [3, 2, 4]
+
+//  const target = 6
 
 // const nums = [3, 3]
 
 // const target = 6
 
 function soma(nums, target) {
+    const mapa = new Map()
+
     for (let i = 0; i < nums.length; i++) {
         const complemento = target - nums[i]
+
         
 
-        const res2 = target - complemento
+        if (mapa.has(complemento)) {
+            mapa.set(nums[i], i)
 
-        if (nums.indexOf(complemento)) {
-            return [nums.indexOf(res2), nums.indexOf(complemento)]
-
-        }   else if (nums.indexOf(res2) === 0 && nums.indexOf(complemento) === 0) {
-            
-            return [nums.indexOf(res2) , nums.indexOf(complemento) + 1]
-          
-        }   else if (nums.indexOf(complemento) === 0) {
-
-            return [nums.indexOf(res2), nums.indexOf(complemento) + 1]
-        } else if (nums.indexOf(res2) === 0) {
-            
-        return [nums.indexOf(res2) + 1, nums.indexOf(complemento) + 2]
+            return [mapa.get(nums[i]), nums.indexOf(complemento)]
         }
-        
 
-        
-
-        
+        mapa.set(nums[i], i)
         
     }
 }
+
 
 
 
